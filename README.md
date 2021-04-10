@@ -1,6 +1,6 @@
 # SL Telegraph Uploder Bot
 
-## You can upload photos and videos to telegraph using this bot. Can be found in telegram as [@SLTelegraphUuloderBot](http://t.me/SLtelegraph_Upoloderbot)
+## You can upload photos and videos to telegraph using this bot. Can be found in telegram as [@SLTelegraphUploderBot](http://t.me/SLtelegraph_Upoloderbot)
 
 ### Deploy to Heroku 🏃‍♂
 
