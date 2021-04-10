@@ -12,14 +12,14 @@ Jebot = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Jebot.on_message(filters.command("start"))
+@epusthakalaya_bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
+               text="""<b>Hey There, I'mSL Telegraph Uploder Bot 🇱🇰
 
-I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
+I can upload photos or videos to telegraph. Made by @kasu_bro
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -27,65 +27,59 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
-                                    ],[
-                                      InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
-                                    ]]
+                                            "DEVELPOER", url="https://t.me/kasu_bro"),
+                                        InlineKeyboardButton(
+                                            "Channel", url="https://t.me/epusthakalaya_bots")
+                               ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("help"))
+@epusthakalaya_bot.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Telegraph Bot Help!
+               text="""<b>SL Telegraph Uploder Bot Help!
 
 Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
 
-~ @Infinity_BOTs</b>""",
+~ @epusthakalaya_bots</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="start"),
                                         InlineKeyboardButton(
                                             "About", callback_data="about"),
-                                  ],[
-                                        InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
-                                    ]]
+                                  ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("about"))
+@epusthakalaya_bot.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>About Telegraph Bot!</b>
+               text="""<b>About SL Telegraph Uploder Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
+<b>♞ Developer:</b> <a href="https://t.me/kasu_bro">Kasuntha 🇱🇰</a>
 
-<b>♞ Support:</b> <a href="https://t.me/InfinityBOTs_Support">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://t.me/epusthakalaya_bots">EPUETHAKALAYA Support</a>
 
-<b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
-<b>~ @Infinity_BOTs</b>""",
+
+<b>~ @epusthakalaya_bot</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
-                                        InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
-                                    ]]
+                                     ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.photo)
+@epusthakalayabot.on_message(filters.photo)
 async def telegraphphoto(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -95,13 +89,13 @@ async def telegraphphoto(client, message):
     except:
         await msg.edit_text("Photo size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @Infinity_BOTs**',
+        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @epusthakalaya_bots**',
             disable_web_page_preview=True,
         )
     finally:
         os.remove(download_location)
 
-@Jebot.on_message(filters.video)
+@epusthakalaya_bot.on_message(filters.video)
 async def telegraphvid(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -111,7 +105,7 @@ async def telegraphvid(client, message):
     except:
         await msg.edit_text("Video size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @Infinity_BOTs**',
+        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @epusthakalaya_bots**',
             disable_web_page_preview=True,
         )
     finally:
@@ -127,7 +121,7 @@ async def telegraphgif(client, message):
     except:
         await msg.edit_text("Gif size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @Infinity_BOTs**',
+        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\n~ @epusthakalaya_bots**',
             disable_web_page_preview=True,
         )
     finally:
@@ -149,7 +143,7 @@ async def button(bot, update):
 print(
     """
 Bot Started!
-Join @Infinity_BOTs
+Join @epusthakalaya_bots
 """
 )
 
