@@ -17,4 +17,4 @@
 
 ### Developers:
 
-[@ImJanindu](https://t.me/ImJanindu)
+[KASUNTHA](https://t.me/kasu_bro)
